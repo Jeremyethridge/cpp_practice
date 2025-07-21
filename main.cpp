@@ -1,20 +1,32 @@
 #include <iostream>
- /* & is used to obtain the memory address of a variable
-       * is used to declare a pointer and to access the value at the address the pointer holds
-       if * is used at the data type then it is assigning a pointer and if * is used at the variable it dereferences the pointer
+
+ /* 
     */
+struct Person {
+        std::string name;
+        int age;
+        double weight;
+
+
+        void enterInformation(){
+            std::cout << "Name: " << name << std::endl;
+            std::cout << "Age: " << age << std::endl;
+            std::cout << "Weight: " << weight <<std::endl;
+        }
+    };
+
+
+// 
 
 int main(){
-    int value = 100;
-    int valueb = 200;
+    
+    Person person;
+    person.name = std::cin << "What's your name?" << std::endl;
+    person.age = std::cin << "How old are you?" << std::endl;
+    person.weight = std::cin << "How much do you weight?" << std::endl;
 
-    int* ptr = &value;
-    std::cout << ptr << std::endl;
-
-
-    // pointers are 8 bytes for 64-bit systems and 4 bytes for 32 bit systems
-
-    ptr = &valueb;
-    std::cout << ptr;
+    person.enterInformation();
+    
     return 0;
+
 }
