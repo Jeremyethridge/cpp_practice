@@ -14,7 +14,13 @@ struct Person {
         }
     };
 
-int main(){
+
+    class Employee{
+        std::string full_name;
+
+    };
+
+int main(int argc, char **__argv){
     
     Person person;
 
@@ -32,5 +38,13 @@ int main(){
     person.enterInformation();
     
     return 0;
+
+
+    int x = 4;
+    int* ptr = &x;
+    int** ptr2 = &ptr;
+
+    int y = **ptr2;
+
 
 }
