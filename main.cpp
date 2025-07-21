@@ -13,7 +13,7 @@ int main(){
 
 
     // pointers are 8 bytes for 64-bit systems and 4 bytes for 32 bit systems
-    
+
     ptr = &valueb;
     std::cout << ptr;
     return 0;
