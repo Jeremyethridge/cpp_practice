@@ -21,6 +21,7 @@ By learning C++, I aim to move from configuring hardware to programming it—bri
 I'm building my C++ skills through:
 - [C++ Source #1](https://en.cppreference.com/)
 - [C++ Source #2](https://devdocs.io/cpp/algorithm/binary_search)
+- [C++ Source #3](https://www.geeksforgeeks.org/cpp/cpp-pointers/)
 - Video tutorials and educational resources
 - Hands-on practice in this repo
 - Studying computer architecture and embedded system design
