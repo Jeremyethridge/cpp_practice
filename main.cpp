@@ -1,7 +1,6 @@
 #include <iostream>
+#include <string>
 
- /* 
-    */
 struct Person {
         std::string name;
         int age;
@@ -15,16 +14,21 @@ struct Person {
         }
     };
 
-
-// 
-
 int main(){
     
     Person person;
-    person.name = std::cin << "What's your name?" << std::endl;
-    person.age = std::cin << "How old are you?" << std::endl;
-    person.weight = std::cin << "How much do you weight?" << std::endl;
 
+    std::cout << "What's your name? ";
+    std::getline(std::cin, person.name);
+
+    std::cout << "How old are you? ";
+    std::cin >> person.age;
+
+    std::cout << "How much do you weight? ";
+    std::cin >> person.weight;
+
+    std::cout << "\n--- Entered Information ---\n";
+    
     person.enterInformation();
     
     return 0;
