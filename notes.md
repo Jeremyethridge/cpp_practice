@@ -29,8 +29,31 @@ Heap - Dynamic allocation from the heap through malloc() or sbrk() or other memo
 Static is a fixed size at compilation, dynamic changes. When using malloc() malloc will add more memory for metadata and storing the pointer
 Free is used to reclaim memory allocated and it takes in the address to the memory you are trying to free. You don't need to pass free the size of the memory because the memory is stored with Malloc
 
+
+- Calloc, Malloc, and Realloc
+
+ Calloc - function that returns a pointer to the first byte of the allocated memory block if the allocation succeeds. if size is 0 the value returned depends on the implementation of the library. May or may not be a null pointer
+
+ Malloc - Function that allocates a block of uninitialized memory to a pointer. it is defined in the cstdlib header file.
+
+ Realloc - function that reallocates memory that was previously allocated using malloc, calloc or realloc function and yet not freed using the free function. Parameters are a ptr and new_size (unsigned integral value) returns null pointer if allocation fails or a pointer to the beginning of the reallocated memory block
+
+
+ 2 ways of reallocating memory 
+ 1. expanding or contracting the same memory block. If the area is expanded the contents of the newly allocated block are undefined
+ 2. Moving to new location. New memory block of size new_size bytes is allocated. contents of the memory block still are unchanged.
+
 - &: The ampersand symbol acts as the address-of operating and allows you to obtain the memory address of a variable. 
 
 - C99 -  designated initializers for structs and goes by key value pairs
 
 - Class vs Struct - Struct is considered Plain Old Data or Simple Data Aggregates and Class is for object oriented design and Encapsulation
+
+- RAM (Random access memory) - Memory is divided into a text and data segment, Data is static and dynamic, static is uninitialized and initialized, dynamic is stack and heap.
+
+Text segment or code segment contains the instructions for executing the program (readonly)- fixed size, read directly from executable, also stores literals
+Static Memory - uninitialized vs initialized - Initialized data segment or data segment holds initialized global and static varables. fixed in size, read directly from executable Read/write excessable, data can be modified. Uninitialized data segment (BSS - Block started by symbol ) fixed size, read/write data in BSS segment is initialzied to 0 BSS can just store the size of the array and the 0s are implicit whereas if its initialized it will be read directly from the executable.
+
+Heap - is variable in size, grows and shrinks as the program runs. Malloc and free in C and New and Delete in C++ for memory. Very useful for dynamic data structures like linked list whos sizes can't be deteremined at compile time.
+
+Stack - manages function calls, local variables, and input arguments. Mimics the stack data structures where things can only be accessed from the top (LIFO). When a function is called its variables and arguments are pushed ontop of the stack. Location is kept track of by the stack pointer. When the function returns it's stack frame is popped from the top of the stack.
