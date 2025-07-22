@@ -26,9 +26,11 @@ Attempting to dereference a null pointer can lead to undefined behavior IE crash
 
 - Memory - Static vs Dynamic memory allocation. Static allocation is typically a variable that goes on the stack, always in scope of the function that's running it
 Heap - Dynamic allocation from the heap through malloc() or sbrk() or other memory allocators you will get a pointer of memory that is out of scope
-Static is a fixed size at compilation, dynamic changes
+Static is a fixed size at compilation, dynamic changes. When using malloc() malloc will add more memory for metadata and storing the pointer
+Free is used to reclaim memory allocated and it takes in the address to the memory you are trying to free. You don't need to pass free the size of the memory because the memory is stored with Malloc
 
 - &: The ampersand symbol acts as the address-of operating and allows you to obtain the memory address of a variable. 
 
 - C99 -  designated initializers for structs and goes by key value pairs
 
+- Class vs Struct - Struct is considered Plain Old Data or Simple Data Aggregates and Class is for object oriented design and Encapsulation
