@@ -25,3 +25,11 @@ I'm building my C++ skills through:
 - Video tutorials and educational resources
 - Hands-on practice in this repo
 - Studying computer architecture and embedded system design
+
+
+# Courses Completed/in progress
+1. Udemy - ARM Cortex-M: Modular Embedded Systems Design
+2. Coursera - Introduction to Embedded Machine Learning
+2. Coursera - Introduction to Programming the Internet of Things (IOT) Specialization
+3. edX - Embedded Systems - Shape the World: Microcontroller Input/Output
+
