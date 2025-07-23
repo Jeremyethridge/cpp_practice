@@ -57,3 +57,12 @@ Static Memory - uninitialized vs initialized - Initialized data segment or data 
 Heap - is variable in size, grows and shrinks as the program runs. Malloc and free in C and New and Delete in C++ for memory. Very useful for dynamic data structures like linked list whos sizes can't be deteremined at compile time.
 
 Stack - manages function calls, local variables, and input arguments. Mimics the stack data structures where things can only be accessed from the top (LIFO). When a function is called its variables and arguments are pushed ontop of the stack. Location is kept track of by the stack pointer. When the function returns it's stack frame is popped from the top of the stack.
+
+
+
+# Data Structures and Algorithms 
+
+1. Two Sum: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+You can return the answer in any order.
+
