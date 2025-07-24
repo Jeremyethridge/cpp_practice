@@ -119,3 +119,16 @@ Space - Reserves a block of memory and fills it with zeros.
 Align - Used to ensure next object aligns properly 
 Export - to make an object accessible from another file
 Global - Same meaning as EXPORT
+Import - To access an exported object
+End - placed at the end of each file
+DCB - Places byte (8-bits) sized constant in memory
+DCW - Places a half-word (16-bits) sized constant into memory 
+DCD - Places a word (32-bits) sized constant in memory
+EQU - To give a symbolic name to a numeric constant
+.text - Makes assembly code callable by C 
+
+Tiva C Launchpad TM4C123G microcontroller is used in this course:
+Processor : Cortex M4
+Flash : 256k
+Max Speed : up to 80MHz
+
