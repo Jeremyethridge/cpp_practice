@@ -127,6 +127,41 @@ DCD - Places a word (32-bits) sized constant in memory
 EQU - To give a symbolic name to a numeric constant
 .text - Makes assembly code callable by C 
 
+MOV - Move data within processor without accessing memory
+cannot MOV more than 8-bits value
+cannot MOV more to high register
+
+Examples: 
+R0 = 150 immediate value must be 8-bit
+MOV R0,#150 
+
+r1 = r2 copies value from r2 to r1
+MOV r1,r2
+
+LDR(Load Data Register) - Loads a register with either 32-bit constant value or another register. Reads 32-bit value from memory to register
+
+LDR R0, =0xFFFF, Loads 0xFFFF into R0
+LDR R1,[R2], R1 value pointed to by r2
+
+
+STR = Stores a register value into memory
+STR R0,[R1], Store the value of R0 into R1. First register or Operand is the source and the 2nd is the destination. Opposite for LDR
+
+B - Branch to a location
+B loop, Branch to / jump to "LOOP" 
+
+BL - Branch to subroutine
+BL Turn_On, Call Turn_on, Turn_On is a subroutine   
+
+BX LR - Return from subroutine call
+BLUE_ON mov r2,#0x01
+            BX LR
+
+                                
+NOP - No operation, do nothing, STR R0,[R1]  Store the value of R0 into R1, do nothing for 2 cycles 1 NOP = 1 cycle
+                                NOP
+                                NOP
+
 Tiva C Launchpad TM4C123G microcontroller is used in this course:
 Processor : Cortex M4
 Flash : 256k
