@@ -59,10 +59,63 @@ Heap - is variable in size, grows and shrinks as the program runs. Malloc and fr
 Stack - manages function calls, local variables, and input arguments. Mimics the stack data structures where things can only be accessed from the top (LIFO). When a function is called its variables and arguments are pushed ontop of the stack. Location is kept track of by the stack pointer. When the function returns it's stack frame is popped from the top of the stack.
 
 
+.h Files are header files that server as an interface for C source files and it primarily contains declarations of functions, variables, and macros that are intended to be shared and used across multiple source files
 
-# Data Structures and Algorithms 
+.c - implementation file that actual code exist - c code
+.s - assembly code 
 
-1. Two Sum: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-You can return the answer in any order.
 
+# Call Graph
+Definition: Control Flow Graph which represent calling relationships between subroutines in a computers program
+
+Central module - Calls and directs all other modules. Main.c file
+
+ultrasonic, timer, pwm, motor, light, ir
+US module - calsl ultrasonic sensor (HW) (Head of robot)
+
+Timer - GPTM (General purpose timer Module)
+
+PWM (Pulse width modulation) - Servo Motor (Neck) 
+
+Motor - DC Motor (Limbs)
+
+LED 
+
+IR - IR Pair (Tail)
+
+
+# Flow Chart                    
+Foreground Thread                 
+- Main                                
+- Initialize Modules                    
+- Enable Interrupts                     
+- Run robot behavior                    
+
+ Background Thread (Interrupt handler or Interrupt service routine (ISR))
+ - Only moves downward, enables short and bounded execution time in background thread
+ - If statements on directon
+
+
+ # Assembly Langauge Syntax
+ - Four Fields
+ Label, Opcode (Operation Code), Operand ; comment
+ Init, MOV, RO,#150, ; RO=150
+
+ Label - Used to find the position current instruction in memory. Can use label field to jump to particular instruction
+
+ Opcode - Specifies processor operation to perform
+
+ Operand - Specifies source/destination of data to be processed by opcode
+
+ Comment - Used to explain code meaning
+
+Directives - Assist and control assembly process. Also called pseudo-ops, are not part of the instruction set. Change the way the code is compiled and assembled 
+
+Thumb - Placed at the top of the file to specify that code is generated with Thumb instructions. 
+Code - Denotes the section for machine instructions (ROM)
+Data - Denotes the section for global variables (RAM)
+Area - Instructs the assembler to assemble a new code or data section 
+Space - Reserves a block of memory and fills it with zeros. 
+Align - Used to ensure next object aligns properly 
+Export - to make an object accessible from another file
+Global - Same meaning as EXPORT
