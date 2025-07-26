@@ -154,7 +154,7 @@ BL - Branch to subroutine
 BL Turn_On, Call Turn_on, Turn_On is a subroutine   
 
 BX LR - Return from subroutine call
-BLUE_ON mov r2,#0x01
+BLUE_ON mov r2,#001
             BX LR
 
                                 
@@ -168,3 +168,27 @@ Flash : 256k
 Max Speed : up to 80MHz
 
 Starting with turning on a red led with Assembly and Keil uVision5
+
+Going through schematics for control board
+
+To initialize input/output ports requires 3 steps
+1. Activate clock of the port in registers (Page 340)
+2. Unlock pin - Only needed for PD7
+3. Set direction of pin in DIR register. When set to 0 the pin is an input and 1 is an output(Page 663)
+4. Enable piun in DEN register. (682)
+
+Writing/Read data : GPIODATA register (654)
+
+Registers are 32 bits. Bit/Field 31:6 reserved meaning you can't do anything with those bits. These reserved registers are typically for internal use
+
+R5 is used to control Port F 
+R4 is used for Port E
+
+
+If either of these are in use then there needs to be a 1 to enable and provide a clock to GPIO Port # in run mode
+
+GPIO direction register says 0-7 is usable. 
+
+GPIO Digital Enable 0-7 usable. 0 means pin is disabled and 1 means enable
+
+
