@@ -192,3 +192,9 @@ GPIO direction register says 0-7 is usable.
 GPIO Digital Enable 0-7 usable. 0 means pin is disabled and 1 means enable
 
 
+Different types of memory in Microcontrollers - Flash and RAM 
+Flash memory is non volatile and RAM is volatile.
+If it is volatile that means whatever is stored will stay there when it's powered off and in the RAM it will not be there.
+Flash stores code. RAM stores program data
+Flash is Static. RAM is Dynamic 
+Flash is larger. RAM is smaller
