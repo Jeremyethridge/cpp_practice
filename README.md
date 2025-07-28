@@ -38,6 +38,15 @@ I'm building my C++ skills through:
 # New Project
 - Created a new project in uVision
 
+# CPU (Central Processing Unit)
+- ALU (Arithmetic Logic Unit) - Performs arithmetic and logical operations
+- ACC (Accumulator) - Stores the results of the arithmetic and logical operations
+- GPR (General Purpose Register) - Used for TEMPORARY storage of data during calculations
+- CU (Control Unit) - Fetches, decodes, and executes instructions, orchestrating the CPU's activities.
+- MDR (Memory Data Register) - Holds data being read from or written to memory
+- MAR ( Memory Address register) - Stores the memory address being accessed
+- PC (Program Counter) - Keeps track of the memory address of the next instruction to be executed
+- IR (Instruction Register) - Holds the current instruction being executed
 
 # Microcontroller Information
 
@@ -58,11 +67,14 @@ CISC - Complex instruction set computing utilizes a larger, more complex set of 
 Memory Architecture - Harvard, Von Neumann
 Harvard - Separate memory spaces for instruction and data. Biggest difference between Harvard and Von Neumann is how the CPU fetches instructions and data.
 
+Harvard - Flash (Data & Address bus ) to CPU and on the other side RAM (Data & Address bus). Better for parallel processing 
+
 Von Neumann - Uses a single memory space for both instructions and data. Instructions and data reside in the same memory space accessed by a single address bus or data bus
+
+# Bus Computing
 Address bus - Carries the location (Address) of the data being accessed. Tells the memory where to look. CPU to the memory or other components. Unidirectional only carries from CPU to memory
 Data bus - Transmits the actual data to or from that location. Provides what to put at the address. bidirectional, data flows in both directions from CPU to memory (Read/Write)
 Control bus - Carries the control signals that coordinate the activies of the data and address buses. Read/Write operation and can include timing information. Unidireciton or bidirectional
 
 Example: CPU places the memory address on the address bus, CPU sends a read singal on the control bus, the memory at the address places the data on the data bus, and the CPU receieves the data.
-
 
