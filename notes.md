@@ -3,10 +3,6 @@
 - volatile tells the compiler that a variable's value can change at any time possibly due to external factors outside the programs control
 - Both type qualifiers can be used together to describe a variable is a constant to the program but can be modified from the hardware, Sensor. 
 
-
-
-
-
 # Vocabulary
 - Forward Declaration: When an entity informs the compiler of its existence and type without providing a full declaration or implementation
 
