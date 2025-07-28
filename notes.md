@@ -26,6 +26,7 @@ Static is a fixed size at compilation, dynamic changes. When using malloc() mall
 Free is used to reclaim memory allocated and it takes in the address to the memory you are trying to free. You don't need to pass free the size of the memory because the memory is stored with Malloc
 
 
+## Calling functions
 - Calloc, Malloc, and Realloc
 
  Calloc - function that returns a pointer to the first byte of the allocated memory block if the allocation succeeds. if size is 0 the value returned depends on the implementation of the library. May or may not be a null pointer
@@ -47,6 +48,8 @@ Free is used to reclaim memory allocated and it takes in the address to the memo
 
 - RAM (Random access memory) - Memory is divided into a text and data segment, Data is static and dynamic, static is uninitialized and initialized, dynamic is stack and heap.
 
+- ROM (Read Only Memory) - Non-volatile memory that is stored without power
+
 Text segment or code segment contains the instructions for executing the program (readonly)- fixed size, read directly from executable, also stores literals
 Static Memory - uninitialized vs initialized - Initialized data segment or data segment holds initialized global and static varables. fixed in size, read directly from executable Read/write excessable, data can be modified. Uninitialized data segment (BSS - Block started by symbol ) fixed size, read/write data in BSS segment is initialzied to 0 BSS can just store the size of the array and the 0s are implicit whereas if its initialized it will be read directly from the executable.
 
@@ -61,7 +64,7 @@ Stack - manages function calls, local variables, and input arguments. Mimics the
 .s - assembly code 
 
 
-# Call Graph
+# Embedded Project
 Definition: Control Flow Graph which represent calling relationships between subroutines in a computers program
 
 Central module - Calls and directs all other modules. Main.c file
