@@ -1,14 +1,6 @@
-#include <iostream>
+#include <msp430.h>
 
+int a[5] = {0xAAAA, 0xBBBB, 0xCCCC, 0xDDDD}; // Global variable initialized (.data + .const ) RAM + FLASH
+const int b[5] = { 0xBBBB, 0xBBBB, 0xBBBB, 0xBBBB }; // Constant variable (.const) FLASH 
+int c[5]; // Global variable not initialized (.bss) RAM
 
-
-    float add(int x, int y){
-        return (float)(x + y);
-    }
-
-
-int main(){
-    float result = add(3,4);
-    std::cout << "Result: " << result << std::endl;
-    return 0;
-}

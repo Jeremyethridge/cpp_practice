@@ -22,6 +22,7 @@ I'm building my C++ skills through:
 - [C++ Source #1](https://en.cppreference.com/)
 - [C++ Source #2](https://devdocs.io/cpp/algorithm/binary_search)
 - [C++ Source #3](https://www.geeksforgeeks.org/cpp/cpp-pointers/)
+- [Microcontroller information](https://www.geeksforgeeks.org/digital-logic/microcontroller-and-its-types/)
 - Video tutorials and educational resources
 - Hands-on practice in this repo
 - Studying computer architecture and embedded system design
@@ -36,4 +37,32 @@ I'm building my C++ skills through:
 
 # New Project
 - Created a new project in uVision
+
+
+# Microcontroller Information
+
+## Different types of microcontrollers
+1. Ardunio -
+2. STM32 - 
+3. MSP430 - 
+4. PIC - 
+5. ESP32 - 
+
+## Architecture
+- Memory/Devices - External Memory, Embedded
+
+- Instruction Set - RISC, CISC. 
+RISC - Reduced instruction Set computing focuses on smaller, simplier set of instructions, optimized for speed and efficiency
+CISC - Complex instruction set computing utilizes a larger, more complex set of instrucctions allow for more operations per instruction but might be a little slower
+
+Memory Architecture - Harvard, Von Neumann
+Harvard - Separate memory spaces for instruction and data. Biggest difference between Harvard and Von Neumann is how the CPU fetches instructions and data.
+
+Von Neumann - Uses a single memory space for both instructions and data. Instructions and data reside in the same memory space accessed by a single address bus or data bus
+Address bus - Carries the location (Address) of the data being accessed. Tells the memory where to look. CPU to the memory or other components. Unidirectional only carries from CPU to memory
+Data bus - Transmits the actual data to or from that location. Provides what to put at the address. bidirectional, data flows in both directions from CPU to memory (Read/Write)
+Control bus - Carries the control signals that coordinate the activies of the data and address buses. Read/Write operation and can include timing information. Unidireciton or bidirectional
+
+Example: CPU places the memory address on the address bus, CPU sends a read singal on the control bus, the memory at the address places the data on the data bus, and the CPU receieves the data.
+
 
