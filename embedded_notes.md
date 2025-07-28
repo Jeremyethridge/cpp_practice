@@ -42,3 +42,28 @@ Example: CPU places the memory address on the address bus, CPU sends a read sing
 2. 16-bit Microcontrollers - 16-bits wide. Exp: Extended 8051XA, PIC2x, Intel 8096, Motorola MC68HC2. Range: 0x0000 to 0xFFFF, or 0 to 65535. 
 
 3. 32-bit Microcontollers - 32-bits wides. Typically used in advanced applications like medical devices, engine control systems, office machines, esc. Exp: Intel/Atmel 251 family, PIC3x
+
+
+# Protocols
+- I2C - Inter-integrated Circuit - Serial Protocol for short distance data communications. Synchronous master-slave protocol both master and slaves can send/receieve data (Bidirectional, half duplex) Can run at different speeds 
+two wires: Serial Clock (SCL) and Serial Data (SDA)
+
+Topology (I2C) - Master is connected to one or more slave nodes. Exchange data in the form of frames. Start condition, Slave Address, R/W (function), Ack, Data transmitted, Ack, Stop 
+Start condition occurs when a node first pulls SDA low and SCL low. This "Claims the bus" and that node is the master. 
+Slave address - Each node has a unique address normally 7 bits long MSB first.
+
+Timing relationship between SDA and SCL - SDA doesn't change between clock rising or falling edge and data is read in the middle of the clock calls. 
+
+Read/Write - 0 master wants to write data to slave, 1 master wants to read data
+Ack - 0 is ack and 1 is NACK
+Data byte - data being transferred between master and slave (Memory or register content, addresses, esc)
+STOP condition - SCL returns high and SDA returns high 
+
+SDA and SDL is connected to voltage (Vcc or Vdd) via a "pull up" resistor
+One resistor per line (not per device)
+Each I2C device contains logic that can open and close a drain
+when drain is "Closed" the line is pulled low (Connected to ground)
+When drain is "Open" the line is pulled high (Connected to voltage)
+I2C lines are high in the idle state sometimes called an "Open Drain" system
+
+I2C bus speeds (Modes) - Standard = 100 kbps, Fast = 400 Kbps, Fast plus = 1 Mbps, High speed = 3.4 Mbps, Ultra fast = 5 Mbps
