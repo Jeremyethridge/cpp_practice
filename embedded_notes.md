@@ -48,6 +48,14 @@ Example: CPU places the memory address on the address bus, CPU sends a read sing
 - I2C - Inter-integrated Circuit - Serial Protocol for short distance data communications. Synchronous master-slave protocol both master and slaves can send/receieve data (Bidirectional, half duplex) Can run at different speeds 
 two wires: Serial Clock (SCL) and Serial Data (SDA)
 
+- SPI - Serial Peripheral Interface - 5 total connections (Including ground), SCLK (Clock), MOSI (Master output slave input), MISO (Master input slave output), SS (Slave Select) what node to communciate with
+Send Slave select to low then send clock and data signals. 
+
+- UART (Universal Asynchronous Receiver/Transmitter) - 1 to 1, Asynchronous (1 clock is used), 2 wires, 20 Kbps, ack pins (Rx, Tx) medium power, 15m distance
+
+Full Duplex - Allows simultaneous two-way communication (Phone Call)
+Half Duplex - Allows two-way communication but only 1 direction at a time (Walkie-talkie)
+
 Topology (I2C) - Master is connected to one or more slave nodes. Exchange data in the form of frames. Start condition, Slave Address, R/W (function), Ack, Data transmitted, Ack, Stop 
 Start condition occurs when a node first pulls SDA low and SCL low. This "Claims the bus" and that node is the master. 
 Slave address - Each node has a unique address normally 7 bits long MSB first.
@@ -59,7 +67,7 @@ Ack - 0 is ack and 1 is NACK
 Data byte - data being transferred between master and slave (Memory or register content, addresses, esc)
 STOP condition - SCL returns high and SDA returns high 
 
-SDA and SDL is connected to voltage (Vcc or Vdd) via a "pull up" resistor
+SDA and SCL is connected to voltage (Vcc or Vdd) via a "pull up" resistor
 One resistor per line (not per device)
 Each I2C device contains logic that can open and close a drain
 when drain is "Closed" the line is pulled low (Connected to ground)
@@ -67,3 +75,4 @@ When drain is "Open" the line is pulled high (Connected to voltage)
 I2C lines are high in the idle state sometimes called an "Open Drain" system
 
 I2C bus speeds (Modes) - Standard = 100 kbps, Fast = 400 Kbps, Fast plus = 1 Mbps, High speed = 3.4 Mbps, Ultra fast = 5 Mbps
+
