@@ -11,11 +11,11 @@
 # Microcontroller Information
 
 ## Different types of microcontrollers
-1. Ardunio -
-2. STM32 - 
-3. MSP430 - 
-4. PIC - 
-5. ESP32 - 
+1. Ardunio Portenta H7 - CPU (Dual-core Cortex-M7 @ 480 MHz (main), Cortex-M4 @ 240 MHz (low-power tasks)), RAM (16MB SDRAM), FLASH (16 MB NOR + microSD support)
+2. STM32H7 - CPU (ARM Cortex-M7 @ 480 MHz), RAM (1MB SRAM), Flash (2 MB), Peripherals (SPI, I2C, CAN, Ethernet, etc), 
+3. RP2040 (Raspberry Pi) - CPU (Dual-core ARM Cortex-M0+ @ 133 MHz), RAM (264 KB SRAM), FLASH (2MB External), 
+4. TM4C123GH6P - CPU (ARM Cortex-M4F @ 80 MHz), RAM (32 KB SRAM), Flash (256KB), GPIO/PWM/Timers, Great for robotics 
+5. ESP32-S3 - CPU (Dual-core Xtensa LX7) up to 240 MHz, 512 KB SRAM + 8MB External PSRAM (common), Flash (up to 16 MB (External)) Wi-Fi 4, Bluetooth 5, USB-OTG
 
 ## Architecture
 - Memory/Devices - External Memory, Embedded
