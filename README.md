@@ -38,3 +38,9 @@ I'm building my C++ skills through:
 # New Project
 - Created a new project in uVision
 
+# Parts Ordered
+1. STM32F446RET6 - Microcontroller
+2. L298N - Driver Controller
+3. 3-6v Gearbox motor - Motor and Wheel kit
+4. Sensors 
+5. Breadboard and F/M M/M wires

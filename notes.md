@@ -197,3 +197,4 @@ If it is volatile that means whatever is stored will stay there when it's powere
 Flash stores code. RAM stores program data
 Flash is Static. RAM is Dynamic 
 Flash is larger. RAM is smaller
+
