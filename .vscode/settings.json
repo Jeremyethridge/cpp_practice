@@ -50,5 +50,16 @@
         "xstring": "cpp",
         "xtr1common": "cpp",
         "xutility": "cpp"
-    }
+    },
+
+     "terminal.integrated.profiles.windows": {
+        "Developer Command Prompt": {
+            "path": "cmd.exe",
+            "args": [
+                "/k",
+                "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\VsDevCmd.bat"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Developer Command Prompt"
 }
